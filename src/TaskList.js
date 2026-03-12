@@ -8,13 +8,9 @@ class TaskList extends Component {
     { id: 3, text: "3" },
   ];
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      update: false,
-    };
-  }
+  state = {
+    update: false,
+  };
 
   deleteTask = (id) => {
     TaskList.tasks = TaskList.tasks.filter((task) => task.id !== id);
